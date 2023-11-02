@@ -9,7 +9,10 @@
             <view class="f-year-month"><text class="label">佛历：</text><text class="f-month">{{foday}}</text></view>
             <view class="date-show-year" wx:for="{{directors}}">{{item}}</view>
             
-            <view class="row col"><text class="blable">{{shou}}</text><text class="blable">{{gong}}宫</text></view>
+            <view class="row col">
+              <text class="blable">{{gong}}宫</text>
+              <text class="blable">{{shou}}</text>
+            </view>
         </view>
         <view class="inner-comment"><text>“</text>{{comment}}</view>
         <view class="inner-movie">
