@@ -1,0 +1,198 @@
+/* pages/foli/foli.wxss */
+page {
+  background-color: #FFF;
+  height: 100%;
+  font-family: "PingFang SC",HiraginoSansGB-W3,"Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+}
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100rpx 0;
+  box-sizing: border-box;
+} 
+view{
+  box-sizing: border-box;
+}
+
+
+.label {
+  font-size: 30rpx;
+  font-weight: bold;
+  color:darkgoldenrod;
+  width: 120rpx;
+  text-align: left;
+  flex: none;
+  text-indent: 5rpx;
+}
+.f-year-month{
+  padding: 15px;
+  text-align: center;
+}
+.f-year-month text{
+  font-size: 42rpx;
+}
+.f-month{
+  padding-right:15px;
+  border-bottom:1px solid darkred;
+  color:darkred;
+}
+.f-day{
+  text-align: center;
+  font-size: 45rpx;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 900;
+  color: black;
+}
+.title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: blue;
+  width: 120rpx;
+  text-align: left;
+  flex: none;
+  text-indent: 5rpx;
+}
+
+.grid {
+  margin-top:50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.row {
+  height: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  position: absolute;
+  bottom: 0;
+  
+}
+
+.col {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom:0;
+}
+.colabel {
+  font-size: 35rpx;
+  font-weight: bold;
+  color:yellow;
+  width: 120rpx;
+  text-align: left;
+  flex: none;
+  text-indent: 5rpx;
+  line-height: 65rpx;
+}
+.blable{
+  margin-top: 20rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+  color:purple;
+} 
+/**index.wxss**/
+.calendar-container{
+  position: relative;
+  height: 100%;
+  padding: 10px;
+}
+.loading{
+  position: absolute;
+  left:50%;
+  top:50%;
+  width:120rpx;
+  height:120rpx;
+  margin-left: -60rpx;
+  margin-top: -60rpx;
+}
+.container-inner{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin-bottom: 10px;
+  border:1px solid #333;
+  font-weight: bold;
+  background-color: #FFFACD;
+}
+.inner-date{
+  flex-grow: 1;
+  padding: 15px;
+  border-bottom:1px solid #333;
+  position: relative;
+}
+.date-year-month{
+  padding: 5px;
+  text-align: center;
+}
+.date-year-month text{
+  border-bottom:1px solid #333;
+}
+.year-month{
+  padding-right:15px;
+  font-size: 35rpx;
+}
+.date-day{
+  text-align: center;
+  font-size: 200px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  letter-spacing: -5px;
+  color: darkgreen;
+}
+.date-show-year{
+  color:#666;
+  text-align: center;
+  margin: 10rpx;
+  font-size: 32rpx;
+}
+.date-directors{
+  text-align: center;
+  color:#AAA;
+  font-size: 12px;
+}
+.date-directors text:last-child text{
+  display:none;
+}
+.inner-comment{
+  width: 100%;
+  padding: 30px 10px 20px 10px;
+  font-style: italic;
+  color:darkslategray;
+  font-size: 38rpx;
+}
+.inner-comment text{
+  font-size: 30px;
+  color:#777;
+}
+.inner-movie{
+display: -webkit-flex;
+display: flex;
+padding: 20px 10px 15px 10px;
+}
+.movie-average{
+  font-size:40px;
+  line-height:40px;
+  letter-spacing: -5px;
+  margin-right: 10px;
+  color: red;
+}
+.star{
+  width:20px;
+  height:20px;
+  margin: 2px;
+  vertical-align: top;
+}

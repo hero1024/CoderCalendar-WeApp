@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/hdrl/hdrl",
+    "pages/lunar/lunar",
+    "pages/foli/foli",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "list": [
+    {
+      "pagePath": "pages/lunar/lunar",
+      "text": "黄历",
+      "iconPath": "/static/date/黄历.png",
+      "selectedIconPath": "/static/date/黄历1.png"
+    },
+    {
+      "pagePath": "pages/hdrl/hdrl",
+      "text": "道历",
+      "iconPath": "/static/date/道历1.png",
+      "selectedIconPath": "/static/date/道历.png"
+    },
+    {
+      "pagePath": "pages/foli/foli",
+      "text": "佛历",
+      "iconPath": "/static/date/佛历2.png",
+      "selectedIconPath": "/static/date/佛历.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "码历",
+      "iconPath": "/static/date/黄历查询2.png",
+      "selectedIconPath": "/static/date/黄历查询.png"
+    }
+  ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "海若黄历",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

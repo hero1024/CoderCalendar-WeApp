@@ -1,0 +1,46 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="moon dis_flex">
+<image src="{{moonGif}}" mode="bottom left" class="flex" style="width: 55px; height:55px;"></image>
+<text class="flex" style="padding-top:1rem;">月相：{{moon}}月</text>
+</view>
+<view class="lunartime">{{lunarDay}} {{tim2}}时</view>
+<view class="info">
+<!--shiganzhi-->
+<rich-text nodes="{{sg3}}"></rich-text>
+<view class="nowtime">{{clock1}}</view>
+<view class="weekime">{{weekDay}}</view>
+</view>
+<view class="today">
+  <view class="yiContainer">
+    <view class="yiTextContainer">
+      <text class="yi">宜</text>
+    </view>
+    <view class="yiItemContainer">
+      <view wx:for="{{today.goodList}}" wx:for-index="name" >
+        <view class="itemContainer ">
+          <text class="itemTitle ">{{item.name}}</text>
+          <text class="itemContent ">{{item.good}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="buyiContainer ">
+    <view class="buyiTextContainer ">
+      <text class="buyi ">忌</text>
+    </view>
+    <view class="buyiItemContainer ">
+      <view wx:for="{{today.badList}}" wx:for-index="name">
+        <view class="itemContainer ">
+          <text class="jitemTitle ">{{item.name}}</text>
+          <text class="itemContent ">{{item.bad}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+  <text class="tag ">座位朝向：面向{{today.direction}}写程序，BUG 最少。</text>
+  <text class="tag ">今日宜饮：{{today.drinks}}</text>
+  <text class="tag ">女神亲近指数：{{today.stars}}</text>
+</view>

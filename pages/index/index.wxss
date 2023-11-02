@@ -1,0 +1,136 @@
+/**index.wxss**/
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: 2rem;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.yiContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.yiTextContainer {
+  display:flex;
+  width: 30%;
+  height: 100%;
+  background-color: #FFFF00;
+  justify-content: center;
+  align-items: center;
+}
+
+.yi {
+  font-size: 40px;
+  color: #000;
+}
+
+.yiItemContainer {
+  width: 70%;
+  display: flex;
+  background-color: #00FFFF;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.buyiContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.buyiTextContainer {
+  display: flex;
+  width: 30%;
+  height: 100%;
+justify-content: center;
+  align-items: center;
+  background-color: #f44;
+}
+
+.buyi {
+  font-size: 40px;
+  color: #fff;
+}
+
+.buyiItemContainer {
+  width: 70%;
+  display: flex;
+  background-color: #98FB98;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+
+}
+
+.itemTitle {
+font-size: 20px;
+  color:darkred;
+}
+
+.jitemTitle {
+  font-size: 20px;
+    color: #f44;
+  }
+
+.itemContent{
+  font-size: 15px;
+  color: #7a7e7c;
+}
+
+.date{
+  background: #fff;
+  padding: 10px;
+  color: #000;
+  font-size: 20px;
+}
+.tag {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: lightgoldenrodyellow;
+  font-size: 15px;
+}
+.itemContainer{
+ display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom:10px; 
+}
+
+.weekime{ font-size:0.75rem; font-weight:600; padding-top:0.75rem; color:lightpink; text-align:center;}
+.lunartime{ font-size:0.75rem; font-weight:600; padding-top:0.75rem; color:#C0C; text-align:center;}
+.moon{background:#000;color:#FF6; padding:0.5rem 1rem 0.2rem 1rem;}
+.nowtime{ font-size:0.75rem; font-weight:600; padding-top:0.75rem; color:greenyellow; text-align:center;}
+.dis_flex{ -webkit-display: flex; -moz-display: flex; -o-display: flex; -ms-flex:flex;display: flex; }
+.flex{ -webkit-flex: 1; -moz-flex: 1; -o-flex: 1; -ms-flex:1;flex: 1; }
+.info{margin:0.5rem 0.8rem; text-align: center;}
+.info p{line-height:1.2rem;}
+.today {
+  flex-direction: column;
+  background-color: #FFFACD;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+  }  

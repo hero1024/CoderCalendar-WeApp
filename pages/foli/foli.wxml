@@ -1,0 +1,29 @@
+<!--pages/foli/foli.wxml-->
+<view class="calendar-container">
+  <!-- <image class="main-bg" src="/static/date/bgf.jpg"></image> -->
+    <view  class="container-inner">
+        <view class="inner-date">
+          <view class="date-year-month"><text class="year-month">{{daystr}}</text></view>
+            <view class="date-day">{{day}}</view>
+            
+            <view class="f-year-month"><text class="label">佛历：</text><text class="f-month">{{foday}}</text></view>
+            <view class="date-show-year" wx:for="{{directors}}">{{item}}</view>
+            
+            <view class="row col"><text class="blable">{{shou}}</text><text class="blable">{{gong}}宫</text></view>
+        </view>
+        <view class="inner-comment"><text>“</text>{{comment}}</view>
+        <view class="inner-movie">
+            <view class="movie-average">{{average}}</view>
+            <view class="movie-info">
+            <text class="label">● 星宿：</text> 
+                <text class="title">{{xiu}} {{zheng}} {{animal}}</text>
+                <view class="stars">
+                    <block wx:for="{{stars}}"  wx:for-item="item">
+                        <image src="/static/date/{{item}}.gif" mode="aspectFit" class="star"></image>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+

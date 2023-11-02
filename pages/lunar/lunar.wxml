@@ -1,0 +1,199 @@
+<!--pages/lunar/lunar.wxml-->
+<view class="calendar">
+
+  <view class="center border-right bg">
+    <view class="border-bottom">
+
+      <view class="div1">
+        <text>公历 {{ state.year }}年 {{ state.month }}月 {{ state.day }}日 星期{{ state.weekInChinese }} {{ state.xingZuo }}座
+        </text>
+        <view class="today">
+          {{ state.day }}
+        </view>
+        <text class="lunar">农历 {{ state.lunarYearInChinese }}年 {{ state.lunarMonthInChinese }}月 {{ state.lunarDayInChinese }}</text>
+      </view>
+    </view>
+    <view class="grid border-bottom">
+      <view class="col2 border-right">
+        <view class="bar">财神位</view>
+        <view class="gridcol">
+          <view class="row col">
+            <view class="label">喜神</view>
+            <view>{{ state.positionXi }}</view>
+          </view>
+          <view class="row col">
+            <view class="label">福神</view>
+            <view>{{ state.positionFu }}</view>
+          </view>
+          <view class="row col">
+            <view class="label">财神</view>
+            <view>{{ state.positionCai }}</view>
+          </view>
+        </view>
+      </view>
+      <view class="col2">
+        <view class="bar">阴阳贵神</view>
+        <view class="gridcol">
+          <view class="row col">
+            <view class="label">阳贵神</view>
+            <view>{{ state.positionYangGui }}</view>
+          </view>
+          <view class="row col">
+            <view class="label">阴贵神</view>
+            <view>{{ state.positionYinGui }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="grid border-bottom">
+      <view class="col2">
+        <view class="bar">空亡所值</view>
+        <view class="gridcol">
+          <view class="row col">
+            <view class="label">年</view>
+            <view>{{ state.yearKongWang }}</view>
+          </view>
+          <view class="row col">
+            <view class="label">月</view>
+            <view>{{ state.monthKongWang }}</view>
+          </view>
+          <view class="row col">
+            <view class="label">日</view>
+            <view>{{ state.dayKongWang }}</view>
+          </view>
+        </view>
+      </view>
+      <view class="col2 border-left">
+        <view class="bar">九宫飞星</view>
+        <view class="gridcol">
+          <view class="row col">
+            <view class="label">九星</view>
+            <view>{{ state.dayJiuXing }}</view>
+          </view>
+          <view class="row col">
+            <view class="label">二十八宿</view>
+            <view>{{ state.xiu }}</view>
+          </view>
+          <view class="row col">
+            <view>{{ state.yearZhiShui }}</view>
+            <view>{{ state.yearDeJin }}</view>
+          </view>
+          <view class="row col">
+            <view>{{ state.yearFenBing }}</view>
+            <view>{{ state.yearGenTian }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="grid border-bottom">
+      <view class="gridcol2 border-right">
+        <view class="row col border-bottom">
+          <view class="label">{{ state.yearGanZhi }}年</view>
+          <view>属{{ state.yearShengXiao }}</view>
+          <view>{{ state.yearNaYin }}</view>
+        </view>
+        <view class="row col border-bottom">
+          <view class="label">{{ state.monthGanZhi }}月</view>
+          <view>属{{ state.monthShengXiao }}</view>
+          <view>{{ state.monthNaYin }}</view>
+        </view>
+        <view class="row col border-bottom">
+          <view class="label">{{ state.dayGanZhi }}日</view>
+          <view>属{{ state.dayShengXiao }}</view>
+          <view>{{ state.dayNaYin }}</view>
+        </view>
+        <view class="row col bg border-bottom">
+          <view><text class="label">节气 </text> {{ state.prevJq }}</view>
+        </view>
+        <view class="yj-container border-bottom">
+          <view class="yj yi">宜</view>
+          <ul>
+            <li wx:for="{{state.dayYi}}" wx:for-item="o">{{ o }}</li>
+          </ul>
+        </view>
+        <view class="border-bottom js">
+          <view>
+            <view class="label">吉神宜趋</view>
+            <ul>
+              <li wx:for="{{state.dayJiShen}}" wx:for-item="o">{{ o }}</li>
+            </ul>
+          </view>
+        </view>
+        <view class="row col bg">
+          <view class="label">彭祖</view>
+          <view>{{ state.pengZuGan }}</view>
+        </view>
+        <view class="row col bg border-bottom">
+          <view class="label">百忌</view>
+          <view>{{ state.pengZuZhi }}</view>
+        </view>
+        <view class="row col">
+          <view class="label">月名</view>
+          <view>{{ state.yueMing }}</view>
+        </view>
+        <view class="row col">
+          <view class="label">月相</view>
+          <view>{{ state.yueXiang }}月</view>
+        </view>
+        <view class="row col">
+          <view class="label">物候</view>
+          <view>{{ state.wuHou }}</view>
+        </view>
+      </view>
+      <view class="gridcol2  border-right">
+        <view class="row col border-bottom">
+          <view class="label">相冲</view>
+          <view> {{ state.dayChong }}</view>
+        </view>
+        <view class="row col border-bottom">
+          <view class="label">值神</view>
+          <view> {{ state.dayZhiShen }}</view>
+        </view>
+        <view class="row col border-bottom">
+          <view class="label">十二神</view>
+          <view> {{ state.dayTianShen }}</view>
+        </view>
+        <view class="row col bg border-bottom">
+          <view><text class="label">节气 </text> {{ state.nextJq }}</view>
+        </view>
+        <view class="yj-container border-bottom">
+          <view class="yj ji">忌</view>
+          <ul>
+            <li wx:for="{{state.dayJi}}" wx:for-item="o">{{ o }}</li>
+          </ul>
+        </view>
+        <view class="border-bottom js">
+          <view>
+            <view class="label">凶煞宜忌</view>
+            <ul>
+              <li wx:for="{{state.dayXiongSha}}" wx:for-item="o">{{ o }}</li>
+            </ul>
+          </view>
+        </view>
+        <view class="row col bg">
+          <view class="label">本月胎神</view>
+          <view>{{ state.monthTaiShen }}</view>
+        </view>
+        <view class="row col bg border-bottom">
+          <view class="label">今日胎神</view>
+          <view>{{ state.dayTaiShen }}</view>
+        </view>
+
+        <view class="row col">
+          <view class="label">岁煞</view>
+          <view>岁煞{{ state.daySha }}</view>
+        </view>
+        <view class="row col">
+          <view class="label">六曜</view>
+          <view>{{ state.liuYao }}</view>
+        </view>
+        <view class="row col">
+          <view class="label">日禄</view>
+          <view>{{ state.dayLu }}</view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+</view>

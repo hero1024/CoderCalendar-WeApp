@@ -1,0 +1,31 @@
+<!--pages/hdrl/hdrl.wxml-->
+<!--index.wxml-->
+<view class="box">
+  <image class="main-bg" src="/static/date/bg.jpg"></image>
+  <view class="date-year-month"><text class="year-month">{{today}}</text></view>
+  <view class="date-year-month">命卦：<text class="lable">{{gua}}</text></view>
+  <view class="title">{{daoDate}}</view>
+  <text class="content " wx:for="{{daoFest}}">- {{ item }}</text>
+  <image class="jiantouStyle" src="/static/date/古风物件，中国风，中国结.png"></image>
+  <image class='m-compassbg' src='/static/date/R-C.jpg' style='transform:rotate({{rotate}}deg);'></image>
+  <view class="compassStyle">{{area}}  {{detailArea}}°</view>
+  <!-- <view class='lable' style="white-space:pre-wrap">
+    {{detail}}
+  </view> -->
+  
+  <view class="grid">
+    <view class="col">
+      <text class="colabel">四吉方位：</text>
+      <ul class='jlable' >
+        <li wx:for="{{jdetail}}">{{item}}</li>
+            </ul>
+  </view>
+  <view class="col">
+    <text class="colabel">四凶方位：</text>
+    <ul class='xlable' >
+      <li wx:for="{{xdetail}}">{{item}}</li>
+            </ul>
+  </view>
+  </view>
+</view>
+
